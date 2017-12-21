@@ -25,8 +25,22 @@ export class newgame extends React.Component {
 	    
 		return (
 			<div>
-				<h1>Hello New Game</h1>
-
+				<div><h1>Hello New Game</h1></div>
+	    <div id="modal-container">
+	      <div className="modal choose-modal">
+	        <h3>Choose Your Weapon</h3>
+	        <div className="button-area">
+	        	<span onclick="setTurn(this);" className="x-marker">X</span>
+	        	<span onclick="setTurn(this);" className="o-marker">O</span>
+	        </div>
+	      </div>
+	      <div className="modal end-game-modal">
+	        <h3></h3>
+	        <p>Try harder next time!</p>
+	        <div className="button-area"><span>Play Again</span>
+	        </div>
+	      </div>
+	    </div>
     
 			</div>
 		)
