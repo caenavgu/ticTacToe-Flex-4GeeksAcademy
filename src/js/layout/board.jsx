@@ -2,7 +2,7 @@ import React from 'react';
 
 import todoStore from '../stores/todoStore';
 
-export class Home extends React.Component {
+export class board extends React.Component {
     
     constructor(){
         super();
@@ -20,14 +20,9 @@ export class Home extends React.Component {
     
 	render() {
 	    
-	    var tasksToRender = this.state.data.map(function(task){
-	       return <li key={task.id}><input type="checkbox" /> {task.title} <a href="#">delete</a></li>
-	    });
-	    
 		return (
 			<div>
-				<h1>Simple TODO App</h1>
-				<ul>{tasksToRender}</ul>
+				<h1>Hello Board</h1>
 			</div>
 		)
 	}

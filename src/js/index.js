@@ -5,7 +5,7 @@ import $ from "jquery";
 import 'bootstrap';
 import '../styles/index.scss';
 
-import {Layout} from './layout/Layout.jsx';
+import {Layout} from './layout/layout.jsx';
 
 
 // Add CSS files to bundle
