@@ -1,10 +1,9 @@
 import todoDispatcher from '../dispatchers/todoDispatcher';
 
-export function getBitcoinTicker(task){
-    
+export function setTurn(playerId){
       todoDispatcher.dispatch({
-        actionType: 'TODO_ADD_TASK',
-        data: task
+        actionType: 'SET_TURN',
+        data: playerId
       });
     
 }
