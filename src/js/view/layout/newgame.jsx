@@ -1,14 +1,14 @@
 import React from 'react';
 
-import tictacStore from '../stores/tictacStore';
-import * as tictacActions from '../actions/tictacActions';
+import tictacStore from '../../stores/tictacStore';
+import * as tictacActions from '../../actions/tictacActions';
 
 export class newgame extends React.Component {
     
     componentDidMount(){
     	tictacStore.on('change', () => {
     		console.log('This is this: ',this);
-    		this.props.history.push('/board');	
+    		this.props.history.push('../board');	
     	});
     }
     
