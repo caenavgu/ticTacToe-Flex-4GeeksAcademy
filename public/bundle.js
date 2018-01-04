@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "70522ada12fc793efef8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "400075044c64f180b037"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -41578,7 +41578,7 @@ var newgame = exports.newgame = function (_React$Component) {
 
 			_tictacStore2.default.on('change', function () {
 				console.log('This is this: ', _this2);
-				_this2.props.history.push('../board');
+				_this2.props.history.push('/board');
 			});
 		}
 	}, {
@@ -42307,36 +42307,7 @@ var board = exports.board = function (_React$Component) {
               'div',
               { className: 'row' },
               _react2.default.createElement('div', { className: 'square', onClick: '', id: 's1' }),
-              _react2.default.createElement(
-                'div',
-                { className: 'square', onClick: '', id: 's2' },
-                _tictacStore2.default.getSquareValue()
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'square', onClick: '', id: 's2' },
-                _tictacStore2.default.getSquareValue()
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'square', onClick: '', id: 's2' },
-                _tictacStore2.default.getSquareValue()
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'square', onClick: '', id: 's2' },
-                _tictacStore2.default.getSquareValue()
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'square', onClick: '', id: 's2' },
-                _tictacStore2.default.getSquareValue()
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'square', onClick: '', id: 's2' },
-                _tictacStore2.default.getSquareValue()
-              ),
+              _react2.default.createElement('div', { className: 'square', onClick: '', id: 's2' }),
               _react2.default.createElement('div', { className: 'square', onClick: '', id: 's3' })
             ),
             _react2.default.createElement(

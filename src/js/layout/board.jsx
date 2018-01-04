@@ -1,6 +1,6 @@
 import React from 'react';
 
-import tictacStore from '../../stores/tictacStore';
+import tictacStore from '../stores/tictacStore';
 
 export class board extends React.Component {
 
@@ -19,13 +19,9 @@ export class board extends React.Component {
 <div className="container">
       <div className="board clearfix">
         <div className="row">
-          <div className="square" onClick={''} id="s1"></div>
-          <div className="square" onClick={''} id="s2">{tictacStore.getSquareValue(1)}</div>
-          <div className="square" onClick={''} id="s2">{tictacStore.getSquareValue(1)}</div>
-          <div className="square" onClick={''} id="s2">{tictacStore.getSquareValue(1)}</div>
-          <div className="square" onClick={''} id="s2">{tictacStore.getSquareValue(1)}</div>
-          <div className="square" onClick={''} id="s2">{tictacStore.getSquareValue(1)}</div>
-          <div className="square" onClick={''} id="s2">{tictacStore.getSquareValue(1)}</div>
+          <div className="square" onClick={''} id="s1">
+		  </div>
+          <div className="square" onClick={''} id="s2"></div>
           <div className="square" onClick={''} id="s3"></div>
         </div>
         <div className="row">
