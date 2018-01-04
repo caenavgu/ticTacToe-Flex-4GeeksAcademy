@@ -34,7 +34,6 @@ export class Navbar extends React.Component {
       </nav>
     );
   }
-
   
   renderMenuItems(menuData){
     var items = menuData.map((item) => {
