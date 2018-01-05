@@ -1,7 +1,7 @@
-import todoDispatcher from '../dispatchers/todoDispatcher';
+import ticTacToeDispatcher from '../dispatchers/ticTacToeDispatcher';
 
 export function setTurn(playerId){
-      todoDispatcher.dispatch({
+      ticTacToeDispatcher.dispatch({
         actionType: 'SET_TURN',
         data: playerId
       });

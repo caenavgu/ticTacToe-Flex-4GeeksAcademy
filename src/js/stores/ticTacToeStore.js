@@ -1,7 +1,7 @@
 import EventEmmiter from 'events';
 
-import * as tictacActions from '../actions/tictacActions.js'
-import TodoDispatcher from '../dispatchers/todoDispatcher.js';
+import * as ticTacToeActions from '../actions/ticTacToeActions.js'
+import ticTacToeDispatcher from '../dispatchers/ticTacToeDispatcher.js';
 
 class TicTacStore extends EventEmmiter{
     
@@ -34,7 +34,7 @@ class TicTacStore extends EventEmmiter{
         
     }
 }
-var tictacStore = new TicTacStore();
-TodoDispatcher.register(tictacStore.handleActions.bind(tictacStore));
-window.TodoDispatcher = TodoDispatcher;
-export default tictacStore;
+var ticTacToeStore = new TicTacStore();
+ticTacToeDispatcher.register(ticTacToeStore.handleActions.bind(ticTacToeStore));
+window.ticTacToeDispatcher = ticTacToeDispatcher;
+export default ticTacToeStore;

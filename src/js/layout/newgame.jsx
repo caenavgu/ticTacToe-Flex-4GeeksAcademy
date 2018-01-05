@@ -1,12 +1,12 @@
 import React from 'react';
 
-import tictacStore from '../stores/tictacStore';
-import * as tictacActions from '../actions/tictacActions';
+import ticTacToeStore from '../stores/ticTacToeStore';
+import * as ticTacToeActions from '../actions/ticTacToeActions';
 
 export class newgame extends React.Component {
     
     componentDidMount(){
-    	tictacStore.on('change', () => {
+    	ticTacToeStore.on('change', () => {
     		console.log('This is this: ',this);
     		this.props.history.push('/board');	
     	});
@@ -16,13 +16,12 @@ export class newgame extends React.Component {
 		
 		return (
 			<div>
-				<div><h1>Hello New Game</h1></div>
 	    <div id="container">
 	      <div className=" choose-modal">
 	        <h3>Choose Your Weapon</h3>
 	        <div className="button-area">
-	        	<span onClick={()=>tictacActions.setTurn('x')} className="x-marker">X</span>
-	        	<span onClick={()=>tictacActions.setTurn('o')} className="o-marker">O</span>
+	        	<span onClick={()=>ticTacToeActions.setTurn('x')} className="x-marker">X</span>
+	        	<span onClick={()=>ticTacToeActions.setTurn('o')} className="o-marker">O</span>
 	        </div>
 	      </div>
 	      <div className="modal end-game-modal">
@@ -32,7 +31,6 @@ export class newgame extends React.Component {
 	        </div>
 	      </div>
 	    </div>
-    
 			</div>
 		)
 	}
