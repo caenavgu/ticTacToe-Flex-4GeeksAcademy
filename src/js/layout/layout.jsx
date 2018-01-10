@@ -18,8 +18,7 @@ export class Layout extends React.Component {
                             <Route exact path='/' component={newgame} />
                             <Route exact path='/board' component={board} />
                             <Route render={() => <p className="text-center mt-5">Not found</p>} />
-                            
-                        </Switch>
+                         </Switch>
                     </div>
                 </BrowserRouter>
             </div>

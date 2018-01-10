@@ -25,6 +25,13 @@ class TicTacStore extends EventEmmiter{
         this.emit('change');
     }
     
+
+    
+    
+
+
+    
+    
     handleActions(action){
         console.log('We have received the action', action);
         switch(action.actionType)

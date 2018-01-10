@@ -7,3 +7,11 @@ export function setTurn(playerId){
       });
     
 }
+
+export function switchPlayer(playerId){
+    ticTacToeDispatcher.dispatch({
+        actionType: 'SWITCH_PLAYER',
+        data: playerId
+      });
+  
+}
