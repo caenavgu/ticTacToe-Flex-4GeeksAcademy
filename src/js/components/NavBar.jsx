@@ -13,7 +13,7 @@ export class Navbar extends React.Component {
                 id: Math.random(),
                 label: 'Home', 
                 url: '/',
-                links: null
+                links: 'newgame'
             },
         ]
     }

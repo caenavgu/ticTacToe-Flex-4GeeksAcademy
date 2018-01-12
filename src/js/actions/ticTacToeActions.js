@@ -1,6 +1,7 @@
 import ticTacToeDispatcher from '../dispatchers/ticTacToeDispatcher';
 
 export function setTurn(playerId){
+    
       ticTacToeDispatcher.dispatch({
         actionType: 'SET_TURN',
         data: playerId
@@ -8,10 +9,11 @@ export function setTurn(playerId){
     
 }
 
-export function switchPlayer(playerId){
+export function winPlayer(thestate,cp){
     ticTacToeDispatcher.dispatch({
-        actionType: 'SWITCH_PLAYER',
-        data: playerId
+        actionType: 'WIN_PLAYER',
+        state: thestate,
+        cp: cp
       });
   
 }

@@ -14,15 +14,31 @@ class TicTacStore extends EventEmmiter{
                             '','','',
                             '','','']
         };
+        
+        this.win = null;
     }
     
     getCurrentTurn(){
         return this.currentplayer;
     }
+    getWinner(){
+        return this.win;
+    }
     
     setTurn(playerId){
+        setTimeout(()=>{
         this.currentplayer = playerId;
         this.emit('change');
+        },1000);
+    }
+    
+    winPlayer(state,cp){
+        console.log("Parameters for winplayer: ",state,cp);
+        if( state.s1 == state.s2 && state.s2 ==  state.s3 && state.s3 != '' ){
+            this.win = cp;
+            console.log("The store found a winner");
+        }
+        this.emit('change'); 
     }
     
 
@@ -37,6 +53,10 @@ class TicTacStore extends EventEmmiter{
         switch(action.actionType)
         {
             case "SET_TURN": this.setTurn(action.data); break;
+            case "WIN_PLAYER": 
+                console.log("handle actio:",action);
+                this.winPlayer(action.state, action.cp); 
+            break;
         }
         
     }
