@@ -6,9 +6,7 @@ import {newgame} from './newgame.jsx';
 import {board} from './board.jsx';
 
 export class Layout extends React.Component {
-    
     render(){
-
         return(
             <div>
                 <BrowserRouter>
@@ -24,4 +22,4 @@ export class Layout extends React.Component {
             </div>
         );
     }
-};
+}

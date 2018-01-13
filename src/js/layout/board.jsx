@@ -43,13 +43,13 @@ export class board extends React.Component {
 	  console.log(this.state);
 	  
 	  if(this.state.winner != null) return (<div>
-        <div id="msg" id="container"><h1>We have a winner: {this.state.winner} !!!!</h1></div></div>);
+        <div id="msg" id="container"><h2>We have a winner: {this.state.winner} !!!!</h2></div></div>);
 	    
 		return (
   <div>
         <div id="msg" id="container">
-          <h1>Tic Tac Toe <small>in JAVASCRIPT.</small></h1>
-          <h2 id="message"></h2>
+          <h2>...in JAVASCRIPT!</h2>
+          <h3 id="message"></h3>
           Current player {this.state.currentplayer}<br></br>
           Winner:  {this.state.winner}
           {(this.state.winner != null) ? 

@@ -29,7 +29,7 @@ class TicTacStore extends EventEmmiter{
         setTimeout(()=>{
         this.currentplayer = playerId;
         this.emit('change');
-        },1000);
+        });
     }
     
     winPlayer(state,cp){
@@ -40,13 +40,6 @@ class TicTacStore extends EventEmmiter{
         }
         this.emit('change'); 
     }
-    
-
-    
-    
-
-
-    
     
     handleActions(action){
         console.log('We have received the action', action);
