@@ -14,7 +14,7 @@ class TicTacStore extends EventEmmiter{
                             '','','',
                             '','','']
         };
-        
+              
         this.win = null;
     }
     
