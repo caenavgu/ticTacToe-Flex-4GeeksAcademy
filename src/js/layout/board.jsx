@@ -22,7 +22,11 @@ export class board extends React.Component {
     }
   }
   
-   componentDidMount(){
+  reset() {
+      this.props.history.push('/');
+  }
+  
+  componentDidMount(){
         ticTacToeStore.on('change', () => {
             
             this.setState({ 
@@ -39,16 +43,18 @@ export class board extends React.Component {
 	  console.log(this.state);
 	  
 	  if(this.state.winner != null) return (<div>
-        <div id="msg" id="container"><h1>We have a winner: {this.stte.winner} !!!!</h1></div></div>);
+        <div id="msg" id="container"><h2>We have a winner: {this.state.winner} !!!!</h2></div></div>);
 	    
 		return (
   <div>
         <div id="msg" id="container">
-          <h1>Tic Tac Toe <small>in JAVASCRIPT.</small></h1>
-          <h2 id="message"></h2>
+          <h2>...in JAVASCRIPT!</h2>
+          <h3 id="message"></h3>
           Current player {this.state.currentplayer}<br></br>
-          Win player {this.state.winner}
-               <a href="#" id="start-over" onClick={''}>Start Over</a>
+          Winner:  {this.state.winner}
+          {(this.state.winner != null) ? 
+          (<p><a style={{background: 'blue'}} href="#" id="start-over" onClick={this.reset}> Start Over</a></p>) : ''
+          }
         </div>
 
         <div className="container">
@@ -85,13 +91,14 @@ export class board extends React.Component {
                        this.setState({
                         currentplayer: 'o'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'o');
                     }else{
                        this.setState({
                         currentplayer: 'x'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'x');
                     }
                     
-                     ticTacToeActions.winPlayer(this.state);
                     
                   }} id="s2">{this.state.s2}</div>
                   
@@ -105,14 +112,14 @@ export class board extends React.Component {
                        this.setState({
                         currentplayer: 'o'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'o');
                     }else{
                        this.setState({
                         currentplayer: 'x'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'x');
                     }
                     
-                    
-                     ticTacToeActions.winPlayer(this.state);
                     
                   }} id="s3">{this.state.s3}</div>
                 </div>
@@ -127,14 +134,14 @@ export class board extends React.Component {
                        this.setState({
                         currentplayer: 'o'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'o');
                     }else{
                        this.setState({
                         currentplayer: 'x'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'x');
                     }
                     
-                     ticTacToeActions.winPlayer(this.state);
-                    //ticTacToeActions.switchPlayer(playerId);
                     
                   }} id="s4">{this.state.s4}</div>
                   <div className="square" onClick={ () => {
@@ -147,14 +154,13 @@ export class board extends React.Component {
                        this.setState({
                         currentplayer: 'o'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'o');
                     }else{
                        this.setState({
                         currentplayer: 'x'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'x');
                     }
-                    
-                     ticTacToeActions.winPlayer(this.state);
-                    //ticTacToeActions.switchPlayer(playerId);
                     
                   }} id="s5">{this.state.s5}</div>
                   <div className="square" onClick={ () => {
@@ -167,15 +173,13 @@ export class board extends React.Component {
                        this.setState({
                         currentplayer: 'o'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'o');
                     }else{
                        this.setState({
                         currentplayer: 'x'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'x');
                     }
-                    
-                     ticTacToeActions.winPlayer(this.state);
-                    //ticTacToeActions.switchPlayer(playerId);
-                    
                     
                   }} id="s6">{this.state.s6}</div>
                 </div>
@@ -190,15 +194,13 @@ export class board extends React.Component {
                        this.setState({
                         currentplayer: 'o'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'o');
                     }else{
                        this.setState({
                         currentplayer: 'x'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'x');
                     }
-                    
-                     ticTacToeActions.winPlayer(this.state);
-                    //ticTacToeActions.switchPlayer(playerId);
-                    
                     
                   }} id="s7">{this.state.s7}</div>
                   
@@ -212,14 +214,13 @@ export class board extends React.Component {
                        this.setState({
                         currentplayer: 'o'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'o');
                     }else{
                        this.setState({
                         currentplayer: 'x'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'x');
                     }
-                    
-                     ticTacToeActions.winPlayer(this.state);
-                    //ticTacToeActions.switchPlayer(playerId);
                     
                   }} id="s8">{this.state.s8}</div>
                   
@@ -233,15 +234,13 @@ export class board extends React.Component {
                        this.setState({
                         currentplayer: 'o'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'o');
                     }else{
                        this.setState({
                         currentplayer: 'x'
                         });
+                        ticTacToeActions.winPlayer(this.state, 'x');
                     }
-                    
-                     ticTacToeActions.winPlayer(this.state);
-                    //ticTacToeActions.switchPlayer(playerId);
-                    
                     
                   }} id="s9">{this.state.s9}</div>
                 </div>

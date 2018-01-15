@@ -29,24 +29,17 @@ class TicTacStore extends EventEmmiter{
         setTimeout(()=>{
         this.currentplayer = playerId;
         this.emit('change');
-        },1000);
+        });
     }
     
     winPlayer(state,cp){
         console.log("Parameters for winplayer: ",state,cp);
         if( state.s1 == state.s2 && state.s2 ==  state.s3 && state.s3 != '' ){
+            console.log("The store found a winner and it is: ",cp);
             this.win = cp;
-            console.log("The store found a winner");
         }
         this.emit('change'); 
     }
-    
-
-    
-    
-
-
-    
     
     handleActions(action){
         console.log('We have received the action', action);
