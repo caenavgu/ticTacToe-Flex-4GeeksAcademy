@@ -15,5 +15,5 @@ export function winPlayer(thestate,cp){
         state: thestate,
         cp: cp
       });
-  
 }
+      

@@ -5,6 +5,7 @@ import * as ticTacToeActions from '../actions/ticTacToeActions';
 
 export class board extends React.Component {
   
+  
   constructor(){
     super()
     this.state = {
@@ -38,6 +39,21 @@ export class board extends React.Component {
         });
     }
 
+      switchPlayer(currentPlayer){
+        console.log('entre en la funcion');
+        if(currentPlayer == 'x'){ 
+                       this.setState({
+                        currentplayer: 'o'
+                        });
+                        ticTacToeActions.winPlayer(this.state, 'o');
+                    }else{
+                       this.setState({
+                        currentplayer: 'x'
+                        });
+                        ticTacToeActions.winPlayer(this.state, 'x');
+                    }
+    }
+    
 	render() {
 	  
 	  console.log(this.state);
@@ -65,19 +81,8 @@ export class board extends React.Component {
                     this.setState({
                        s1: this.state.currentplayer
                     });
-                    // console.log(this.state.currentplayer);
-                    if(this.state.currentplayer == 'x'){ 
-                       this.setState({
-                        currentplayer: 'o'
-                        });
-                        ticTacToeActions.winPlayer(this.state, 'o');
-                    }else{
-                       this.setState({
-                        currentplayer: 'x'
-                        });
-                        ticTacToeActions.winPlayer(this.state, 'x');
-                    }
                     
+                    this.switchPlayer(this.state.currentplayer);
                     
                   }} id="s1">{this.state.s1} </div>
                   
